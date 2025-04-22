@@ -1,0 +1,13 @@
+{
+  "name": "social-media-ui",
+  "version": "1.0.0",
+  "description": "",
+  "main": "tailwind.config.js",
+  "scripts": {
+  "dev": "tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
+  "build": "tailwindcss -i ./src/input.css -o ./dist/output.css --minify"
+},
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
