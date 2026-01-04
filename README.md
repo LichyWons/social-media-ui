@@ -30,7 +30,7 @@ The application allows users to register, log in and manage social media posts.
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Installation
 
