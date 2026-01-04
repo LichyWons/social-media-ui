@@ -6,64 +6,83 @@
   <title>User Profile</title>
   <link href="../dist/output.css" rel="stylesheet" />
 </head>
-<body class="bg-gray-100 min-h-screen flex flex-col">
+<body data-page="profile" class="bg-gray-200 min-h-screen flex flex-col">
   <!-- Navigation -->
-  <header class="bg-white shadow-md">
+  <header class="bg-gradient-to-r from-red-500 via-gray-600 to-black shadow-xl border-b-4 border-black">
     <div class="max-w-5xl mx-auto px-4 py-4 flex justify-between items-center">
-      <h1 class="text-xl font-bold">User Profile</h1>
-      <a href="/feed" class="text-blue-600 hover:underline">Back to Feed</a>
+      <a href="/feed/index.html"><h1 class="text-3xl font-extrabold tracking-widest text-white drop-shadow-[2px_2px_0px_#000"] style="text-shadow: 0 0 8px #000, 0 0 16px red">
+        LIFE Invader
+      </h1></a>
+      <nav>
+        <!-- Burger menu button (mobile) -->
+        <button id="menu-toggle" class="md:hidden text-white bg-red-500 border-2 border-black px-3 py-1 rounded hover:bg-red-400 transition">
+          ☰ Menu
+        </button>
+  
+        <!-- Menu links -->
+        <ul id="menu" class="hidden md:flex gap-6 text-lg font-bold text-white">
+          <li><a href="/feed/index.html" class="hover:underline">Feed</a></li>
+          <li><a href="/profile/index.html" class="hover:underline">Profile</a></li>
+          <li><a href="/index.html" class="hover:underline">Log out</a></li>
+        </ul>
+      </nav>
     </div>
   </header>
+  
+<!-- Popup menu (half width + scale animation) -->
+<div id="menu-overlay" 
+class="fixed top-16 right-4 w-1/2 bg-white shadow-xl hidden z-40 rounded-xl border-2 border-black p-6 flex flex-col gap-4 transform scale-0 transition-transform duration-300 origin-top-right">
 
+<a href="/feed/index.html" class="hover:underline text-black font-bold">Feed</a>
+<a href="/profile/index.html" class="hover:underline text-black font-bold">Profile</a>
+<a href="/index.html" class="hover:underline text-black font-bold">Log out</a>
+</div>
   <!-- Profile Content -->
-  <main class="flex-grow max-w-5xl mx-auto px-4 py-8">
+  <main class="flex-grow w-full md:w-2/3 lg:w-1/2 mx-auto px-4 py-8">
     <!-- Profile Info -->
-    <section class="bg-white p-6 rounded-xl shadow-md flex flex-col items-center text-center mb-8">
+    <section class="bg-[url('https://wallpapercave.com/w/wp5334083.jpg')] bg-cover bg-center p-6 rounded-xl shadow-md flex flex-col items-center text-center mb-8">
       <img 
-        src="https://via.placeholder.com/120" 
-        alt="Profile Image" 
-        class="w-28 h-28 rounded-full mb-4"
+        id="profile-avatar"
+        src="https://i.ibb.co/dwq4m1TW/Chat-GPT-Image-25-kwi-2025-12-31-59.png"
+        alt="Profile Image"
+        class="w-28 h-28 rounded-full mb-4 bg-white p-1 border-2 border-black"
       />
-      <h2 class="text-2xl font-bold mb-2">Username123</h2>
+      <h2 id="profile-username" class="text-2xl font-bold mb-2 text-white"
+    style="text-shadow: 
+      2px 2px 0 #000, 
+      4px 4px 4px rgba(0,0,0,0.6), 
+      0 0 10px rgba(0,0,0,0.7);">
+  John Stalker
+</h2>
       <button 
         class="bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-700 transition duration-200"
       >
         Follow
       </button>
     </section>
+    
 
-    <!-- Followers / Following -->
-    <section class="flex justify-around mb-8">
-      <div class="text-center">
-        <p class="text-lg font-bold">120</p>
-        <p class="text-gray-600">Followers</p>
-      </div>
-      <div class="text-center">
-        <p class="text-lg font-bold">85</p>
-        <p class="text-gray-600">Following</p>
-      </div>
-    </section>
+   <!-- Followers / Following -->
+<section class="flex flex-row justify-center mb-8 gap-4">
+  <a href="/profile/followers.html"
+     class="px-6 py-3 bg-red-500 text-white font-bold rounded-md border-2 border-black hover:bg-red-400 hover:scale-105 hover:drop-shadow-[0_0_8px_red] transition-all duration-200">
+    120 Followers
+  </a>
+  <a href="/profile/following.html"
+     class="px-6 py-3 bg-red-500 text-white font-bold rounded-md border-2 border-black hover:bg-red-400 hover:scale-105 hover:drop-shadow-[0_0_8px_red] transition-all duration-200">
+    85 Following
+  </a>
+</section>
+
 
     <!-- User Posts -->
-    <section>
-      <h3 class="text-xl font-bold mb-4">My Posts</h3>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <!-- Example Post -->
-        <article class="bg-white p-4 rounded-xl shadow-md">
-          <img src="https://via.placeholder.com/400x200" alt="Post Thumbnail" class="rounded-md mb-4">
-          <h4 class="text-lg font-bold mb-2">Post Title 1</h4>
-          <p class="text-sm text-gray-700 mb-4">A short preview of the post content goes here.</p>
-          <button class="text-blue-600 hover:underline">Read more</button>
-        </article>
+    <p id="profile-status" class="hidden mb-6 text-sm text-gray-700 text-center"></p>
 
-        <article class="bg-white p-4 rounded-xl shadow-md">
-          <img src="https://via.placeholder.com/400x200" alt="Post Thumbnail" class="rounded-md mb-4">
-          <h4 class="text-lg font-bold mb-2">Post Title 2</h4>
-          <p class="text-sm text-gray-700 mb-4">Another preview of the post content.</p>
-          <button class="text-blue-600 hover:underline">Read more</button>
-        </article>
-      </div>
+    <section>
+      <h3 class="text-xl font-bold mb-4 text-center">My Posts</h3>
+      <div id="profile-posts" class="flex flex-col w-full items-center gap-6"></div>
     </section>
   </main>
+  <script type="module" src="../js/main.js"></script>
 </body>
 </html>

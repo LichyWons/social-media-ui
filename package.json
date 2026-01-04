@@ -4,10 +4,16 @@
   "description": "",
   "main": "tailwind.config.js",
   "scripts": {
-  "dev": "tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
-  "build": "tailwindcss -i ./src/input.css -o ./dist/output.css --minify"
-},
+  "dev": "TAILWIND_MODE=watch tailwindcss --input ./src/input.css --output ./dist/output.css --watch",
+  "build": "tailwindcss --input ./src/input.css --output ./dist/output.css --minify"
+}
+,
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.3",
+    "tailwindcss": "^4.1.4"
+  }
 }

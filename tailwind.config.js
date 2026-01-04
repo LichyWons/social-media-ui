@@ -1,8 +1,6 @@
-module.exports = {
-    content: ["./*.html", "./feed/*.html", "./profile/*.html"],
-    theme: {
-      extend: {},
-    },
-    plugins: [],
-  }
-  
+export default {
+  content: ['./index.html', './**/*.html', './js/**/*.js'],
+  safelist: ['text-red-500'],
+  theme: { extend: {} },
+  plugins: [],
+};

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Post</title>
+  <link href="../dist/output.css" rel="stylesheet" />
+</head>
+<body data-page="post" class="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 text-gray-800 font-sans">
+  <header class="bg-gradient-to-r from-red-500 via-gray-600 to-black shadow-xl border-b-4 border-black">
+    <div class="max-w-5xl mx-auto px-4 py-4 flex justify-between items-center">
+      <a href="/feed/index.html"><h1 class="text-3xl font-extrabold tracking-widest text-white drop-shadow-[2px_2px_0px_#000]">LIFE Invader</h1></a>
+      <nav>
+        <button id="menu-toggle" class="md:hidden text-white bg-red-500 border-2 border-black px-3 py-1 rounded hover:bg-red-400 transition">☰ Menu</button>
+        <ul id="menu" class="hidden md:flex gap-6 text-lg font-bold text-white">
+          <li><a href="/feed/index.html" class="hover:underline">Feed</a></li>
+          <li><a href="/profile/index.html" class="hover:underline">Profile</a></li>
+          <li><a href="/index.html" class="hover:underline">Log out</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div id="menu-overlay" class="fixed top-16 right-4 w-1/2 bg-white shadow-xl hidden z-40 rounded-xl border-2 border-black p-6 flex flex-col gap-4 transform scale-0 transition-transform duration-300 origin-top-right">
+    <a href="/feed/index.html" class="hover:underline text-black font-bold">Feed</a>
+    <a href="/profile/index.html" class="hover:underline text-black font-bold">Profile</a>
+    <a href="/index.html" class="hover:underline text-black font-bold">Log out</a>
+  </div>
+
+  <main class="max-w-3xl mx-auto px-4 py-8">
+    <p id="post-status" class="hidden mb-6 text-sm text-gray-700"></p>
+    <div id="post-container"></div>
+  </main>
+
+  <script type="module" src="../js/main.js"></script>
+</body>
+</html>
