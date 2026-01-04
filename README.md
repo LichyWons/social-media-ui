@@ -2,7 +2,7 @@
 
 Social Media UI – JavaScript 2 Course Assignment
 
-![Running Website Mockup](./assets/ScreenShotLifeInvader.png.png)
+![Running Website Mockup](assets/ScreenShotLifeInvader.png.png)
 
 ## Project Overview
 
