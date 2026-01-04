@@ -1,52 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Login / Register</title>
-  <link href="dist/output.css" rel="stylesheet" />
-</head>
-<body class="flex flex-col items-center justify-center min-h-screen bg-gradient-to-b from-red-500 via-gray-600 to-black">
-  <h1 class="text-[10vw] font-extrabold tracking-widest text-white mb-14"
-  style="text-shadow: 0 0 8px #000, 0 0 16px red;">
-LIFE Invader
-</h1>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login / Register</title>
+    <link href="dist/output.css" rel="stylesheet" />
+  </head>
+  <body
+    class="flex flex-col items-center justify-center min-h-screen bg-gradient-to-b from-red-500 via-gray-600 to-black"
+  >
+    <h1
+      class="text-[10vw] font-extrabold tracking-widest text-white mb-14"
+      style="text-shadow: 0 0 8px #000, 0 0 16px red"
+    >
+      LIFE Invader
+    </h1>
 
-
-  
-  <div class="bg-white p-8 rounded-xl shadow-md w-full max-w-md mt-14">
-    <h1 class="text-2xl font-bold mb-6 text-center">Login or Register</h1>
-    <form action="/profile/index.html" method="GET" class="space-y-4">
-      <div>
-        <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
-        <input 
-          id="email" 
-          name="email" 
-          type="email" 
-          required 
-          class="mt-1 w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" 
-          placeholder="your@email.com"
-        />
-      </div>
-      <div>
-        <label for="password" class="block text-sm font-medium text-gray-700">Password</label>
-        <input 
-          id="password" 
-          name="password" 
-          type="password" 
-          minlength="8" 
-          required 
-          class="mt-1 w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" 
-          placeholder="Minimum 8 characters"
-        />
-      </div>
-      <button
-        type="submit"
-        class="w-full bg-blue-600 text-white py-2 rounded-md text-center hover:bg-blue-700 transition duration-200">
-      Login / Register
-    </button>
-    
-    </form>
-  </div>
-</body>
+    <div class="bg-white p-8 rounded-xl shadow-md w-full max-w-md mt-14">
+      <h1 class="text-2xl font-bold mb-6 text-center">Login or Register</h1>
+      <form action="/profile/index.html" method="GET" class="space-y-4">
+        <div>
+          <label for="email" class="block text-sm font-medium text-gray-700"
+            >Email</label
+          >
+          <input
+            id="email"
+            name="email"
+            type="email"
+            required
+            class="mt-1 w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            placeholder="your@email.com"
+          />
+        </div>
+        <div>
+          <label for="password" class="block text-sm font-medium text-gray-700"
+            >Password</label
+          >
+          <input
+            id="password"
+            name="password"
+            type="password"
+            minlength="8"
+            required
+            class="mt-1 w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            placeholder="Minimum 8 characters"
+          />
+        </div>
+        <button
+          type="submit"
+          class="w-full bg-blue-600 text-white py-2 rounded-md text-center hover:bg-blue-700 transition duration-200"
+        >
+          Login / Register
+        </button>
+      </form>
+    </div>
+  </body>
 </html>
