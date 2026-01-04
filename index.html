@@ -4,9 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login / Register</title>
-    <link href="dist/output.css" rel="stylesheet" />
+    <link href="./dist/output.css" rel="stylesheet" />
   </head>
   <body
+    data-page="auth"
     class="flex flex-col items-center justify-center min-h-screen bg-gradient-to-b from-red-500 via-gray-600 to-black"
   >
     <h1
@@ -18,7 +19,8 @@
 
     <div class="bg-white p-8 rounded-xl shadow-md w-full max-w-md mt-14">
       <h1 class="text-2xl font-bold mb-6 text-center">Login or Register</h1>
-      <form action="/profile/index.html" method="GET" class="space-y-4">
+      <p id="auth-error" class="hidden text-red-600 text-sm mb-4"></p>
+      <form id="auth-form" action="#" method="POST" class="space-y-4">
         <div>
           <label for="email" class="block text-sm font-medium text-gray-700"
             >Email</label
@@ -54,5 +56,6 @@
         </button>
       </form>
     </div>
+    <script type="module" src="./js/main.js"></script>
   </body>
 </html>

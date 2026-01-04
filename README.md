@@ -1,59 +1,77 @@
-# Social Media UI with Tailwind
-# LIFE Invader 🛰️
+# LIFE Invader
 
+Social Media UI – JavaScript 2 Course Assignment
 
-## 📄 Project Overview
+## Project Overview
 
-This project was created as part of the CSS frameworks assignment. The goal was to build a responsive frontend for a social media app using TailwindCSS (without Bootstrap or Sass).
+Front-end client for a social media platform built with **vanilla JavaScript** and **Tailwind CSS**, using the **Noroff Social API (v2)**.
 
-The app consists of **3 pages**:
+The application allows users to register, log in and manage social media posts.
 
-1. **Authentication Page** (`/index.html`)  
-   Login / Register form with HTML validation (`email`, `password` min. 8 characters).
+---
 
-2. **Feed Page** (`/feed/index.html`)  
-   - List of posts (mock data).
-   - Search bar & sort options.
-   - Form to create a new post.
+## Features
 
-3. **Profile Page** (`/profile/index.html`)  
-   - Profile photo, username, followers / following buttons.
-   - List of user posts.
-   - Follow button.
+- User registration and login (`@noroff.no` / `@stud.noroff.no`)
+- View post feed
+- Search and filter posts
+- View post by ID
+- Create, edit and delete own posts
+- Add images to posts using image URL
 
-## Getting Started
+---
 
-### Installing
+## Tech Stack
 
-Simply clone the repo:
+- HTML
+- Vanilla JavaScript (ES Modules)
+- Tailwind CSS (CLI)
+- Noroff Social API v2
+
+---
+
+## 🚀 Getting Started
+
+### Installation
 
 ```bash
-git clone git@github.com/LichyWons/social-media-ui.git
+git clone https://github.com/LichyWons/social-media-ui.git
+npm install
 ```
 
-### Running
+### Running the project
 
-To run the site just open it with VS Code and open with Live Server.
+```bash
+npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch
+```
 
-## Contact
+### Open the project with Live Server from the root directory:
 
-[Facebook](https://www.facebook.com/profile.php?id=100007852157298)
+```cpp
+http://127.0.0.1:5500/
+```
 
-[LinkedIn](https://www.linkedin.com/in/krzysztof-bytniewski-84578b19b)
-## 🎨 Features
+---
 
-- Fully responsive layout (mobile-first).
-- TailwindCSS utility classes.
-- Custom **retro-inspired gradient backgrounds**.
-- Burger menu with:
-  - Animated **popup overlay** (scale effect).
-  - Smooth open/close transition.
-  - Icon toggle (☰ → ×).
+## API Usage
 
-## 🛠️ Stack
+- JWT authentication
 
-- **HTML5**
-- **TailwindCSS v4**
-- **PostCSS + Autoprefixer**
-- **JavaScript ES6 Modules**
+- API key stored in localStorage
 
+- HTTP methods used: GET, POST, PUT, DELETE
+
+---
+
+## JavaScript Documentation
+
+The project includes JSDoc documentation for at least one core function.
+
+---
+
+## Author
+
+Krzysztof Bytniewski
+
+- [LinkedIn](https://www.linkedin.com/in/krzysztof-bytniewski-84578b19b)
+- [Facebook](https://www.facebook.com/profile.php?id=100007852157298)
