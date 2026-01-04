@@ -2,6 +2,8 @@
 
 Social Media UI – JavaScript 2 Course Assignment
 
+![Running Website Mockup](./assets/ScreenShotLifeInvader.png.png)
+
 ## Project Overview
 
 Front-end client for a social media platform built with **vanilla JavaScript** and **Tailwind CSS**, using the **Noroff Social API (v2)**.
@@ -30,7 +32,7 @@ The application allows users to register, log in and manage social media posts.
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Installation
 
