@@ -6,15 +6,36 @@
   <title>Feed</title>
   <link href="../dist/output.css" rel="stylesheet" />
 </head>
-<body class="bg-gray-100 min-h-screen flex flex-col">
-  <!-- Navigation -->
-  <header class="bg-white shadow-md">
-    <div class="max-w-5xl mx-auto px-4 py-4 flex justify-between items-center">
-      <h1 class="text-xl font-bold">Social Media Feed</h1>
-      <a href="/profile" class="text-blue-600 hover:underline">My Profile</a>
-    </div>
-  </header>
+<body class="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 text-gray-800 font-sans">
+    <!-- Navigation -->
+    <header class="bg-gradient-to-r from-red-500 via-gray-600 to-black shadow-xl border-b-4 border-black">
+      <div class="max-w-5xl mx-auto px-4 py-4 flex justify-between items-center">
+        <a href="/feed/index.html"><h1 class="text-3xl font-extrabold tracking-widest text-white drop-shadow-[2px_2px_0px_#000]">
+          LIFE Invader
+        </h1></a>
+        <nav>
+          <!-- Burger menu button (mobile) -->
+          <button id="menu-toggle" class="md:hidden text-white bg-red-500 border-2 border-black px-3 py-1 rounded hover:bg-red-400 transition">
+            ☰ Menu
+          </button>
+    
+          <!-- Menu links -->
+          <ul id="menu" class="hidden md:flex gap-6 text-lg font-bold text-white">
+            <li><a href="/feed/index.html" class="hover:underline">Feed</a></li>
+            <li><a href="/profile/index.html" class="hover:underline">Profile</a></li>
+            <li><a href="/index.html" class="hover:underline">Log out</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+   <!-- Popup menu (half width + scale animation) -->
+<div id="menu-overlay" 
+class="fixed top-16 right-4 w-1/2 bg-white shadow-xl hidden z-40 rounded-xl border-2 border-black p-6 flex flex-col gap-4 transform scale-0 transition-transform duration-300 origin-top-right">
 
+<a href="/feed/index.html" class="hover:underline text-black font-bold">Feed</a>
+<a href="/profile/index.html" class="hover:underline text-black font-bold">Profile</a>
+<a href="/index.html" class="hover:underline text-black font-bold">Log out</a>
+</div>
   <!-- Main Content -->
   <main class="flex-grow max-w-5xl mx-auto px-4 py-6">
     <!-- Search and Sort -->
@@ -67,21 +88,116 @@
     <!-- Posts List -->
     <section class="grid grid-cols-1 md:grid-cols-2 gap-6">
       <!-- Example Post -->
-      <article class="bg-white p-4 rounded-xl shadow-md">
-        <img src="https://via.placeholder.com/400x200" alt="Post Thumbnail" class="rounded-md mb-4">
-        <h3 class="text-lg font-bold mb-2">Example Post Title</h3>
-        <p class="text-sm text-gray-700 mb-4">This is a short description of the post content.</p>
-        <button class="text-blue-600 hover:underline">Read more</button>
-      </article>
+      <!-- Post 1: Motivational hustler (funded by parents) -->
+<article class="bg-white p-4 rounded-xl shadow-md w-full max-w-3xl flex flex-col items-center text-center">
+  <!-- Author -->
+  <div class="flex items-center gap-3 mb-2">
+    <img 
+      src="https://randomuser.me/api/portraits/men/32.jpg" 
+      alt="Max The Hustler avatar" 
+      class="w-10 h-10 rounded-full border-2 border-black"
+    >
+    <p class="text-sm text-gray-500">
+      Posted by <span class="font-semibold text-black">💼 Max The Hustler</span>
+    </p>
+  </div>
+  <img 
+  src="https://pyxis.nymag.com/v1/imgs/daf/87c/6b70cae7e59299a2aab3a833802e464efd-3-bryanboy.w426.jpg"
+    alt="Guy in suit with money" 
+    class="w-full h-60 object-cover rounded-md mb-4"
+  >
+  <h4 class="text-lg font-bold mb-2">💸 Grind 24/7 — Stay Broke Never</h4>
+  <p class="text-sm text-gray-700 mb-4">
+    If you’re not making 10k a month by 19, what are you even doing with your life?  
+    (Thanks mom & dad for the startup capital though 🤫)  
+    #HustleCulture #SelfMadeByFamily
+  </p>
+  <button class="text-blue-600 hover:underline">Read more</button>
+</article>
 
-      <!-- Repeat more posts like this -->
-      <article class="bg-white p-4 rounded-xl shadow-md">
-        <img src="https://via.placeholder.com/400x200" alt="Post Thumbnail" class="rounded-md mb-4">
-        <h3 class="text-lg font-bold mb-2">Another Post</h3>
-        <p class="text-sm text-gray-700 mb-4">Here goes the content preview for another post.</p>
-        <button class="text-blue-600 hover:underline">Read more</button>
-      </article>
+<!-- Post 2: Food influencer girl -->
+<!-- Post 2: Food influencer girl (bread & ketchup edition) -->
+<article class="bg-white p-4 rounded-xl shadow-md w-full max-w-3xl flex flex-col items-center text-center">
+  <!-- Author -->
+  <div class="flex items-center gap-3 mb-2">
+    <img 
+      src="https://randomuser.me/api/portraits/men/32.jpg" 
+      alt="Max The Hustler avatar" 
+      class="w-10 h-10 rounded-full border-2 border-black"
+    >
+    <p class="text-sm text-gray-500">
+      Posted by <span class="font-semibold text-black">💼 Max The Hustler</span>
+    </p>
+  </div>
+  <img src="https://wykop.pl/cdn/c3201142/comment_1592323115IJmvIjpZAMvkgrFYUGKpLk,w400.jpg"
+    alt="Bread and ketchup" 
+    class="w-full h-60 object-cover rounded-md mb-4"
+  >
+  <h4 class="text-lg font-bold mb-2">🍞 Nourish your soul ✨ #EatPraySlay</h4>
+  <p class="text-sm text-gray-700 mb-4">
+    Today’s vibe: simplicity and elegance 💋  
+    White bread with a sophisticated splash of ketchup.  
+    Remember, it’s not just food — it’s a *statement* 😍 #FineDining #SoulFuel #KetchupQueen
+  </p>
+  <button class="text-blue-600 hover:underline">Read more</button>
+</article>
+
+
+<!-- Post 3: Steroid guy flexing hard -->
+<article class="bg-white p-4 rounded-xl shadow-md w-full max-w-3xl flex flex-col items-center text-center">
+  <!-- Author -->
+  <div class="flex items-center gap-3 mb-2">
+    <img 
+      src="https://randomuser.me/api/portraits/men/32.jpg" 
+      alt="Max The Hustler avatar" 
+      class="w-10 h-10 rounded-full border-2 border-black"
+    >
+    <p class="text-sm text-gray-500">
+      Posted by <span class="font-semibold text-black">💼 Max The Hustler</span>
+    </p>
+  </div>
+  <img 
+    src="https://harleystreet-md.co.uk/wp-content/uploads/2024/12/Anabolic-Steroids.jpg"
+    alt="Muscular man flexing at the gym" 
+    class="w-full h-60 object-cover rounded-md mb-4"
+  >
+  <h4 class="text-lg font-bold mb-2">💉 Stay natty, they said…</h4>
+  <p class="text-sm text-gray-700 mb-4">
+    Hard work, discipline, chicken and rice... and maybe just a *tiny* bit of help from the pharmacy 😉  
+    #NoShortcuts #ButAlsoAllTheShortcuts
+  </p>
+  <button class="text-blue-600 hover:underline">Read more</button>
+</article>
+
+<!-- Post 4: The one normal guy (social media dangers for kids) -->
+<article class="bg-white p-4 rounded-xl shadow-md w-full max-w-3xl flex flex-col items-center text-center">
+  <!-- Author -->
+  <div class="flex items-center gap-3 mb-2">
+    <img 
+      src="https://randomuser.me/api/portraits/men/32.jpg" 
+      alt="Max The Hustler avatar" 
+      class="w-10 h-10 rounded-full border-2 border-black"
+    >
+    <p class="text-sm text-gray-500">
+      Posted by <span class="font-semibold text-black">💼 Max The Hustler</span>
+    </p>
+  </div>
+  <img 
+    src="https://ocdn.eu/images/pulscms/ZDA7MDA_/79dac1684b56650ea26e25c0b041edeb.jpg"
+    alt="Kid using tablet in dark room" 
+    class="w-full h-60 object-cover rounded-md mb-4"
+  >
+  <h4 class="text-lg font-bold mb-2">📵 Social media isn't made for children.</h4>
+  <p class="text-sm text-gray-700 mb-4">
+    Studies show early exposure to social media increases anxiety and depression in kids.  
+    Maybe instead of screen time, we try some real life time? 🤝  
+    #ThinkBeforeYouPost #OfflineMatters
+  </p>
+  <button class="text-blue-600 hover:underline">Read more</button>
+</article>
+
     </section>
   </main>
+  <script type="module" src="../js/main.js"></script>
 </body>
 </html>
